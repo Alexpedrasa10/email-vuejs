@@ -26,14 +26,12 @@
             </div>
         </nav>
         <div class="p-4 m-4" id="container">
-            <form>
                 <div class="form-group p-2 m-2">
                     <label for="exampleInputEmail1">Ingrese un correo electronico</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Enter email" v-model="nuevoCorreo" @keyup.enter="agregarCorreo">
                     <button type="submit" class="btn btn-primary m-1 p-1" @click="agregarCorreo">Enviar</button>
                     </div> 
-            </form>
             <ul class="list-group p-2 m-2">
                 <li class="list-group-item" v-for="correos in correo">{{correos.nombre}}
                     <button class="btn btn-sm btn-danger float-right" @click="eliminarCorreo"><i class="fas fa-trash-alt"></i></button>
